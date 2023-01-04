@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Post Register New User with Invalid Parameter</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fcbca6fe-f514-4f65-b9c0-c303b74a025f</testCaseGuid>
+</TestCaseEntity>

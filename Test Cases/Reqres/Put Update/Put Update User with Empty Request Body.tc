@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Put Update User with Empty Request Body</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bc003dce-42c5-4a74-807a-2d9d5649d64b</testCaseGuid>
+</TestCaseEntity>

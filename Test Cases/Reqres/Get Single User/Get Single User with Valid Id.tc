@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Single User with Valid Id</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5ab10076-7a17-4102-b20f-deaea968c19b</testCaseGuid>
+</TestCaseEntity>
