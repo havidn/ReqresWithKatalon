@@ -1,0 +1,52 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Reqres,,,,2023-01-04 14:03:52,2023-01-04 14:05:00,1m - 8.160s,FAILED
+,,,,,,,
+Test Cases/Reqres/Get List User/Get List User With String Parameter,,,,2023-01-04 14:04:01,2023-01-04 14:04:03,1.459s,FAILED
+"response = sendRequest(findTestObject(""Reqres/Get List User/GetListUsersInvalid""))",,,,2023-01-04 14:04:01,2023-01-04 14:04:03,1.421s,PASSED
+"verifyResponseStatusCode(response, 400, CONTINUE_ON_FAILURE)",,,,2023-01-04 14:04:03,2023-01-04 14:04:03,0.008s,FAILED
+,,,,,,,
+Test Cases/Reqres/Get List User/Get List User With Valid Parameter,,,,2023-01-04 14:04:03,2023-01-04 14:04:05,1.950s,PASSED
+"response = sendRequest(findTestObject(""Reqres/Get List User/GetListUsersValid""))",,,,2023-01-04 14:04:04,2023-01-04 14:04:05,1.051s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-04 14:04:05,2023-01-04 14:04:05,0.009s,PASSED
+"verifyElementPropertyValue(response, ""data[1].first_name"", ""Janet"")",,,,2023-01-04 14:04:05,2023-01-04 14:04:05,0.162s,PASSED
+,,,,,,,
+Test Cases/Reqres/Get Single User/Get Single User with String Id,,,,2023-01-04 14:04:05,2023-01-04 14:04:09,3.780s,PASSED
+"response = sendRequest(findTestObject(""Reqres/Get Single User/GetSingleUserString"", [""id"":""test""]))",,,,2023-01-04 14:04:06,2023-01-04 14:04:09,3.004s,PASSED
+"verifyResponseStatusCode(response, 404)",,,,2023-01-04 14:04:09,2023-01-04 14:04:09,0.005s,PASSED
+,,,,,,,
+Test Cases/Reqres/Get Single User/Get Single User with Valid Id,,,,2023-01-04 14:04:09,2023-01-04 14:04:11,2.644s,PASSED
+"response = sendRequest(findTestObject(""Reqres/Get Single User/GetSingleUserValid""))",,,,2023-01-04 14:04:09,2023-01-04 14:04:11,1.403s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-04 14:04:11,2023-01-04 14:04:11,0.007s,PASSED
+"verifyElementPropertyValue(response, ""data.email"", email)",,,,2023-01-04 14:04:11,2023-01-04 14:04:11,0.523s,PASSED
+,,,,,,,
+Test Cases/Reqres/Post Create/Post Register New User with Empty Data,,,,2023-01-04 14:04:17,2023-01-04 14:04:19,1.616s,FAILED
+"response = sendRequest(findTestObject(""Reqres/Post Register User/PostRegisterEmpty"", [""email"":email]))",,,,2023-01-04 14:04:17,2023-01-04 14:04:19,1.589s,PASSED
+"verifyResponseStatusCode(response, 400)",,,,2023-01-04 14:04:19,2023-01-04 14:04:19,0.006s,FAILED
+,,,,,,,
+Test Cases/Reqres/Post Create/Post Register New User with Invalid Parameter,,,,2023-01-04 14:04:24,2023-01-04 14:04:26,1.564s,FAILED
+"response = sendRequest(findTestObject(""Reqres/Post Register User/PostRegisterInvalid"", [""email"":email]))",,,,2023-01-04 14:04:24,2023-01-04 14:04:26,1.535s,PASSED
+"verifyResponseStatusCode(response, 400)",,,,2023-01-04 14:04:26,2023-01-04 14:04:26,0.007s,FAILED
+,,,,,,,
+Test Cases/Reqres/Post Create/Post Register New Valid User,,,,2023-01-04 14:04:26,2023-01-04 14:04:29,2.763s,PASSED
+"response = sendRequest(findTestObject(""Reqres/Post Register User/PostRegisterValid""))",,,,2023-01-04 14:04:27,2023-01-04 14:04:29,2.021s,PASSED
+"verifyResponseStatusCode(response, 201)",,,,2023-01-04 14:04:29,2023-01-04 14:04:29,0.004s,PASSED
+"verifyElementPropertyValue(response, ""email"", email)",,,,2023-01-04 14:04:29,2023-01-04 14:04:29,0.029s,PASSED
+,,,,,,,
+Test Cases/Reqres/Put Update/Put Update User with Empty Request Body,,,,2023-01-04 14:04:45,2023-01-04 14:04:46,1.515s,FAILED
+"response = sendRequest(findTestObject(""Reqres/Put Update/PutUpdateEmptyBody""))",,,,2023-01-04 14:04:45,2023-01-04 14:04:46,1.491s,PASSED
+"verifyResponseStatusCode(response, 400)",,,,2023-01-04 14:04:46,2023-01-04 14:04:46,0.005s,FAILED
+,,,,,,,
+Test Cases/Reqres/Put Update/Put Update User with String Id,,,,2023-01-04 14:04:53,2023-01-04 14:04:55,1.383s,FAILED
+"response = sendRequest(findTestObject(""Reqres/Put Update/PutUpdateStringId""))",,,,2023-01-04 14:04:53,2023-01-04 14:04:55,1.358s,PASSED
+"verifyResponseStatusCode(response, 400)",,,,2023-01-04 14:04:55,2023-01-04 14:04:55,0.008s,FAILED
+,,,,,,,
+Test Cases/Reqres/Put Update/Put Update User with Valid Data,,,,2023-01-04 14:04:55,2023-01-04 14:04:57,2.469s,PASSED
+"response = sendRequest(findTestObject(""Reqres/Put Update/PutUpdate""))",,,,2023-01-04 14:04:56,2023-01-04 14:04:57,1.369s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-04 14:04:57,2023-01-04 14:04:57,0.004s,PASSED
+"containsString(response, ""updatedAt"", false)",,,,2023-01-04 14:04:57,2023-01-04 14:04:57,0.040s,PASSED
+"verifyElementPropertyValue(response, ""name"", ""morpheus"")",,,,2023-01-04 14:04:57,2023-01-04 14:04:57,0.054s,PASSED
+"verifyElementPropertyValue(response, ""job"", ""zion resident"")",,,,2023-01-04 14:04:57,2023-01-04 14:04:57,0.050s,PASSED
+,,,,,,,
+Test Cases/Reqres/Put Update/Put Update User without Id,,,,2023-01-04 14:04:57,2023-01-04 14:05:00,2.959s,PASSED
+"response = sendRequest(findTestObject(""Reqres/Put Update/PutUpdateWithoutId""))",,,,2023-01-04 14:04:58,2023-01-04 14:05:00,2.215s,PASSED
+"verifyResponseStatusCode(response, 404)",,,,2023-01-04 14:05:00,2023-01-04 14:05:00,0.006s,PASSED
